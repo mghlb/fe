@@ -1,0 +1,123 @@
+:root {
+  --clr-dark-cyan: 158, 36%, 37%;
+  --clr-darker-cyan: 158, 36%, 15%;
+  --clr-cream: 30, 38%, 92%;
+  --clr-dark-blu: 212, 21%, 14%;
+  --clr-grayish-blu: 228, 12%, 48%;
+  --clr-white: 0, 0%, 100%;
+
+  --ff-base: "Montserrat", sans-serif;
+  --ff-accent: "Fraunces", serif;
+
+  --fs-pr: 0.875rem;
+  --fs-h1: 2rem;
+  --fs-h2: 1.25rem;
+
+  --fw-1: 500;
+  --fw-2: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  background-color: hsl(var(--clr-cream));
+  font-family: var(--ff-base);
+  font-weight: var(--fw-1);
+  font-size: var(--fs-pr);
+  line-height: 1.7;
+  color: hsl(var(--clr-grayish-blu));
+  margin: 1rem;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.prev-price {
+  font-size: var(--fs-pr);
+  text-decoration: line-through;
+}
+
+.container {
+  display: grid;
+  background-color: hsl(var(--clr-white));
+  border-radius: 0.5em;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+.product-detail {
+  display: grid;
+  gap: 1.5em;
+  padding: 2rem;
+}
+
+.product-category {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: var(--fs-pr);
+}
+
+.product-name {
+  font-size: var(--fs-h1);
+  font-family: var(--ff-accent);
+  color: hsl(var(--clr-dark-blu));
+}
+
+.current-price {
+  font-size: var(--fs-h1);
+  font-family: var(--ff-accent);
+  color: hsl(var(--clr-dark-cyan));
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  border: 0;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  cursor: pointer;
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  font-weight: var(--fw-2);
+  background-color: hsl(var(--clr-dark-cyan));
+  color: hsl(var(--clr-white));
+}
+
+.button:hover,
+.button:focus {
+  background-color: hsl(var(--clr-darker-cyan));
+}
+
+@media (min-width: 40em) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
