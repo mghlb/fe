@@ -45,7 +45,7 @@ body {
 
 .container {
   display: grid;
-  gap: 1.25em;
+  gap: 1.2em;
   background-color: var(--clr-neutral-600);
   margin: 1rem;
   padding: 2em;
@@ -96,22 +96,50 @@ body {
   width: min(100%, 2.5em);
 }
 
-.score-num {
+.score-btn {
   color: var(--clr-neutral-400);
   font-weight: var(--fw-bold);
   cursor: pointer;
 }
 
-.score-num:hover {
+.score-btn:hover {
   background-color: var(--clr-primary-400);
-  color: var(--clr-neutral-100);
-}
-
-.score-num:focus-visible {
-  background-color: var(--clr-neutral-300);
   color: var(--clr-neutral-100);
 }
 
 .text {
   font-weight: var(--fw-bold);
+}
+
+.active {
+  background-color: var(--clr-neutral-300);
+  color: var(--clr-neutral-100);
+}
+
+.hide {
+  display: none;
+}
+
+.thank-text,
+.selection,
+.thank {
+  text-align: center;
+}
+
+.container > svg {
+  margin-inline: auto;
+}
+
+.selection {
+  border: 0;
+  border-radius: 2em;
+  background-color: var(--clr-neutral-500);
+  padding: 0.25em 1.5em;
+  color: var(--clr-primary-400);
+  max-width: 20em;
+  margin-inline: auto;
+}
+
+.thank {
+  color: var(--clr-neutral-100);
 }
