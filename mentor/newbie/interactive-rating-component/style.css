@@ -1,0 +1,117 @@
+:root {
+  --clr-primary-400: hsl(25, 97%, 53%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(217, 12%, 63%);
+  --clr-neutral-400: hsl(216, 12%, 54%);
+  --clr-neutral-500: hsl(216, 12%, 24%);
+  --clr-neutral-600: hsl(213, 19%, 18%);
+  --clr-neutral-700: hsl(216, 12%, 8%);
+
+  --ff-default: "Overpass", sans-serif;
+
+  --fs-base: 0.938rem;
+  --fs-head-1: 1.5rem;
+  --fs-head-2: 1.125rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-neutral-700);
+  font-family: var(--ff-default);
+  line-height: 1.5;
+  color: var(--clr-neutral-300);
+}
+
+.container {
+  display: grid;
+  gap: 1.25em;
+  background-color: var(--clr-neutral-600);
+  margin: 1rem;
+  padding: 2em;
+  max-width: 25em;
+  border-radius: 1em;
+}
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.question {
+  font-size: var(--fs-head-1);
+  color: var(--clr-neutral-100);
+}
+
+.circle {
+  width: min(100%, 3.5em);
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--clr-neutral-500);
+  aspect-ratio: 1/1;
+}
+
+.button {
+  background-color: var(--clr-primary-400);
+  border: 0;
+  padding: 1em 2.5em;
+  border-radius: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-400);
+}
+
+.star {
+  display: grid;
+  place-content: center;
+  width: min(100%, 2.5em);
+}
+
+.score-num {
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+}
+
+.score-num:hover {
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-100);
+}
+
+.score-num:focus-visible {
+  background-color: var(--clr-neutral-300);
+  color: var(--clr-neutral-100);
+}
+
+.text {
+  font-weight: var(--fw-bold);
+}
