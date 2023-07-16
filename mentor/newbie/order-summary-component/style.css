@@ -1,0 +1,146 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue-shadow: hsla(245, 75%, 52%, 0.3);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  --ff-default: "Red Hat Display", sans-serif;
+
+  --fs-pr: 1rem;
+  --fs-h1: 2rem;
+  --fs-h2: 1.1rem;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+svg,
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--ff-default);
+  background-color: var(--pale-blue);
+}
+
+.main {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: white;
+  width: 22.5em;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+}
+
+.card-content {
+  display: grid;
+  gap: 1.75em;
+  padding: 2em;
+  margin-block: 1em;
+  text-align: center;
+  color: var(--desaturated-blue);
+  font-weight: var(--fw-regular);
+}
+
+.title {
+  color: var(--dark-blue);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-black);
+}
+
+.second-title {
+  color: var(--dark-blue);
+  font-size: var(--fs-h2);
+}
+
+.plan-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  gap: 2em;
+  background-color: var(--very-pale-blue);
+  border-radius: 1em;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1.25em;
+}
+
+.button {
+  background-color: var(--bright-blue);
+  color: white;
+  border: 0;
+  border-radius: 1em;
+  padding: 1em 3em;
+  font-weight: var(--fw-black);
+  font-size: var(--fs-h2);
+  box-shadow: 0 1em 1em -0.25em var(--bright-blue-shadow);
+}
+
+.button:hover {
+  cursor: pointer;
+  color: var(--bright-blue);
+  background-color: white;
+}
+
+.cancel {
+  font-size: var(--fs-pr);
+  font-weight: var(--fw-bold);
+}
+
+.cancel:hover {
+  cursor: pointer;
+  color: var(--dark-blue);
+}
+
+a {
+  font-weight: var(--fw-bold);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+
+@media (min-width: 40em) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+
+  .card {
+    width: 25em;
+  }
+}
