@@ -3,15 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Stats preview card component</title>
   </head>
   <body>
     <main>
-      <div class="hero">
-        <div class="hero__content">
+      <div class="card">
+        <div class="card__content">
           <h1 class="title">
-            Get <span class="insigthts">insights</span> that help your business
+            Get <span class="insights">insights</span> that help your business
             grow.
           </h1>
           <p class="text">
@@ -28,25 +34,26 @@
                 <h3 class="nums">314</h3>
                 <p class="category">templates</p>
               </div>
+            </div>
+            <div class="grid-flow">
               <div class="grid-flow">
-                <div class="grid-flow">
-                  <h3 class="nums">12m+</h3>
-                  <p class="category">queries</p>
-                </div>
+                <h3 class="nums">12m+</h3>
+                <p class="category">queries</p>
               </div>
             </div>
           </div>
-          <picture class="hero__image">
-            <source
-              media="(min-width: 40em)"
-              srcset="./images/image-header-desktop.jpg"
-            />
-            <img
-              src="./images/image-header-mobile.jpg"
-              alt="People in an office working over desk"
-            />
-          </picture>
         </div>
+        <picture class="card__image">
+          <source
+            media="(min-width: 40em)"
+            srcset="./images/image-header-desktop.jpg"
+          />
+          <img
+            src="./images/image-header-mobile.jpg"
+            alt="People in an office working over desk"
+          />
+          <div class="overlay"></div>
+        </picture>
       </div>
     </main>
   </body>
