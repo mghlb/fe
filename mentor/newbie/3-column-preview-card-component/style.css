@@ -12,3 +12,96 @@
   --fw-regular: 400;
   --fw-bold: 700;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  font-family: var(--ff-default);
+  color: var(--transparent-white-p);
+  line-height: 1.5;
+  background-color: var(--very-light-gray-bg-h-btn);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-areas: 'a' 'b' 'c';
+  border-radius: 0.5em;
+  margin: 1em;
+  overflow: hidden;
+}
+
+.card__content {
+  display: grid;
+  padding: 2em;
+  gap: 2.5em;
+}
+
+.button {
+  border: 0;
+  border-radius: 2em;
+  background-color: var(--very-light-gray-bg-h-btn);
+  border: 2px solid var(--very-light-gray-bg-h-btn);
+  padding: 1em 1em;
+  max-width: 10em;
+  color: inherit;
+  font-weight: var(--fw-bold);
+}
+
+.button:hover {
+  background-color: inherit;
+  border: 2px solid var(--very-light-gray-bg-h-btn);
+  color: var(--very-light-gray-bg-h-btn);
+  cursor: pointer;
+}
+
+.title {
+  color: var(--very-light-gray-bg-h-btn);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-accent);
+  font-size: 2rem;
+}
+
+.description {
+  max-width: 15em;
+  font-size: 0.975rem;
+  color: var(--transparent-white-p);
+}
+
+.card__content[data-category='sedan'] {
+  background-color: var(--bright-orange);
+  color: var(--bright-orange);
+}
+
+.card__content[data-category='suv'] {
+  background-color: var(--dark-cyan);
+  color: var(--dark-cyan);
+}
+
+.card__content[data-category='luxury'] {
+  background-color: var(--very-dark-cyan);
+  color: var(--very-dark-cyan);
+}
+
+@media (min-width: 945px) {
+  .cards-container {
+    grid-template-areas: 'a b c';
+  }
+}
