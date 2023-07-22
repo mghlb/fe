@@ -34,7 +34,10 @@ svg {
 }
 
 body {
+  background: url('./images/bg-pattern-top-desktop.svg') no-repeat top,
+    url('./images/bg-pattern-bottom-desktop.svg') no-repeat bottom;
   min-height: 100dvh;
+  width: 100dvw;
   background-color: var(--clr-neutral-100);
   font-family: var(--ff-default);
   line-height: 1.5;
@@ -43,7 +46,6 @@ body {
 main {
   display: grid;
   place-content: center;
-  margin-block: 2em;
 }
 
 .flex-group {
@@ -60,6 +62,7 @@ main {
 
 .container {
   padding: 2em;
+  height: 100%;
 }
 
 .title {
@@ -99,7 +102,7 @@ main {
 
 .review-card {
   background-color: var(--clr-primary-800);
-  padding: 2em;
+  padding: 1.5em;
   border-radius: 0.5em;
   color: var(--clr-neutral-200);
 }
@@ -129,29 +132,52 @@ main {
   .flex-group {
     flex-direction: row;
     justify-content: space-between;
+    margin-block: 3em;
   }
 
   .review-card {
-    max-width: 20em;
+    max-width: 25em;
     margin-inline: 0.5em;
+    height: 80%;
   }
 
   .rate-container {
-    width: 20em;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .rate-container p {
+    margin-block: 0;
   }
 
   .title {
     max-width: 10em;
     text-align: start;
+    padding: 0;
   }
 
   .text {
     max-width: 25em;
     text-align: start;
+    font-size: var(--fs-bold);
   }
 
-  .rate-card[data-category='report'] {
-    color: yellow;
+  .irene {
+    margin-block-start: 1em;
+  }
+
+  .anne {
+    margin-block-start: 2em;
+  }
+
+  .rate-container[data-category='report'] {
+    margin-inline-start: 1em;
+    width: 100%;
+  }
+
+  .rate-container[data-category='BestTech'] {
     margin-inline-start: 2em;
+    width: 100%;
   }
 }
