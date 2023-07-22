@@ -1,0 +1,157 @@
+:root {
+  --clr-primary-800: hsl(300, 43%, 22%);
+  --clr-primary-500: hsl(333, 80%, 67%);
+
+  --clr-neutral-400: hsl(303, 10%, 53%);
+  --clr-neutral-200: hsl(300, 24%, 96%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --fs-main: 0.938rem;
+  --fs-bold: 1.25rem;
+  --fs-black: 3rem;
+
+  --ff-default: 'League Spartan', sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 500;
+  --fw-black: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--clr-neutral-100);
+  font-family: var(--ff-default);
+  line-height: 1.5;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  margin-block: 2em;
+}
+
+.flex-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.grid-flow {
+  display: grid;
+  place-content: center;
+  gap: 1em;
+}
+
+.container {
+  padding: 2em;
+}
+
+.title {
+  text-align: center;
+  padding-inline: 1em;
+  color: var(--clr-primary-800);
+  font-size: var(--fs-black);
+  font-weight: var(--fw-black);
+  line-height: 1;
+}
+
+.text {
+  text-align: center;
+  color: var(--clr-neutral-400);
+  margin-block-end: 1em;
+}
+
+.rate-container {
+  background-color: var(--clr-neutral-200);
+  padding: 1em 3em;
+  border-radius: 1em;
+}
+
+.rate-container p {
+  text-align: center;
+  margin-block-start: 0.75em;
+  color: var(--clr-primary-800);
+  font-weight: var(--fw-black);
+}
+
+.stars {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.review-card {
+  background-color: var(--clr-primary-800);
+  padding: 2em;
+  border-radius: 0.5em;
+  color: var(--clr-neutral-200);
+}
+
+.flex-card {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.customer-info {
+  margin-block: 0;
+  line-height: 1.2;
+}
+
+.buyer {
+  color: var(--clr-primary-500);
+}
+
+.avatar {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  max-width: 3em;
+}
+
+@media (min-width: 725px) {
+  .flex-group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .review-card {
+    max-width: 20em;
+    margin-inline: 0.5em;
+  }
+
+  .rate-container {
+    width: 20em;
+  }
+
+  .title {
+    max-width: 10em;
+    text-align: start;
+  }
+
+  .text {
+    max-width: 25em;
+    text-align: start;
+  }
+
+  .rate-card[data-category='report'] {
+    color: yellow;
+    margin-inline-start: 2em;
+  }
+}
