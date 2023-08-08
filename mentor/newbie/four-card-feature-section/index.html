@@ -3,31 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="title">
-      Reliable, efficient delivery<span>Powered by Technology</span>
-    </h1>
-    <h2 class="subtitle">
-      Our Artificial Intelligence powered tools use millions of project data
-      points to ensure that your project is successful
-    </h2>
-    <div class="grid-flow">
-      <div class="card">
+    <div class="header">
+      <h1 class="title">
+        Reliable, efficient delivery <br />
+        <span>Powered by Technology</span>
+      </h1>
+      <p class="subtitle">
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
+    </div>
+    <div class="flex-flow">
+      <div class="card" data-category="supervisor">
         <h3 class="card-title">Supervisor</h3>
-        Monitors activity to identify project roadblocks
+        <p class="card-text">
+          Monitors activity to identify project roadblocks
+        </p>
+        <img src="./images/icon-supervisor.svg" alt="" />
       </div>
-      <div class="card">
-        <h3 class="card-title">Team Builder</h3>
-        Scans our talent network to create the optimal team for your project
+      <div class="middle">
+        <div class="card" data-category="builder">
+          <h3 class="card-title">Team Builder</h3>
+          <p class="card-text">
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <img src="./images/icon-team-builder.svg" alt="" />
+        </div>
+        <div class="card" data-category="karma">
+          <h3 class="card-title">Karma</h3>
+          <p class="card-text">
+            Regularly evaluates our talent to ensure quality
+          </p>
+          <img src="./images/icon-karma.svg" alt="" />
+        </div>
       </div>
-      <div class="card">
-        <h3 class="card-title">Karma</h3>
-        Regularly evaluates our talent to ensure quality
-      </div>
-      <div class="card">
+      <div class="card" data-category="calculator">
         <h3 class="card-title">Calculator</h3>
-        Uses data from past projects to provide better delivery estimates
+        <p class="card-text">
+          Uses data from past projects to provide better delivery estimates
+        </p>
+        <img src="./images/icon-calculator.svg" alt="" />
       </div>
     </div>
   </body>
