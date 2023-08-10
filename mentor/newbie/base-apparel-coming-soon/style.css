@@ -93,7 +93,14 @@ p {
   border-radius: 2em;
   border: 1px solid var(--clr-prm-desat-red);
   padding: 1.5em;
+  font: inherit;
   width: 100%;
+}
+.email:focus-visible {
+  border: 1px solid var(--clr-prm-desat-red);
+}
+.email:focus {
+  outline: none;
 }
 .email::placeholder {
   color: var(--clr-prm-desat-red);
@@ -104,12 +111,20 @@ p {
   position: relative;
   align-self: self-start;
 }
+.error__icon {
+  position: absolute;
+  top: 15px;
+  right: 5em;
+  display: none;
+}
+
 button {
+  cursor: pointer;
   position: absolute;
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   border: 0;
   height: 100%;
-  width: 5em;
+  width: 7em;
   border-radius: 50em;
   right: 0;
 }
