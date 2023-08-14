@@ -1,0 +1,15 @@
+:root {
+  --clr-red: hsl(0, 100%, 74%);
+  --clr-green: hsl(154, 59%, 51%);
+  --clr-blue: hsl(248, 32%, 49%);
+  --clr-dark-blue: hsl(249, 10%, 26%);
+  --clr-grayish-blue: hsl(246, 25%, 77%);
+
+  --fs-main: 1rem;
+  --ff-default: 'Poppins', sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
