@@ -93,6 +93,7 @@ form {
 }
 
 input {
+  width: 100%;
   padding: 1em;
   border-radius: 0.5em;
   font: inherit;
@@ -102,14 +103,32 @@ input::placeholder {
   font-weight: var(--fw-semibold);
   font-size: 0.75rem;
 }
+label {
+  position: relative;
+}
+.errorIcon {
+  position: absolute;
+  width: 2em;
+  top: 15px;
+  right: 15px;
+}
+.errorText {
+  color: var(--clr-red);
+  font-size: 0.75rem;
+  font-weight: var(--fw-medium);
+  text-align: end;
+  margin-block: 0.5em;
+}
 
 form button {
   background-color: var(--clr-green);
   padding: 1.5em 3em;
+  cursor: pointer;
   color: white;
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   border: 0;
+  outline: none;
   border-radius: 0.5em;
   box-shadow: 0 2.5px 0 var(--clr-green-shadow);
 }
