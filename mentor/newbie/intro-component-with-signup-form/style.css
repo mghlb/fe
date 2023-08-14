@@ -1,6 +1,7 @@
 :root {
   --clr-red: hsl(0, 100%, 74%);
   --clr-green: hsl(154, 59%, 51%);
+  --clr-green-shadow: hsl(154, 59%, 40%);
   --clr-blue: hsl(248, 32%, 49%);
   --clr-dark-blue: hsl(249, 10%, 26%);
   --clr-grayish-blue: hsl(246, 25%, 77%);
@@ -12,4 +13,113 @@
   --fw-medium: 500;
   --fw-semibold: 600;
   --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--clr-red);
+  background-image: url(./images/bg-intro-mobile.png);
+  font-family: var(--ff-default);
+  line-height: 1.5;
+}
+
+.container {
+  padding: 2em;
+}
+
+.flex-group {
+  display: flex;
+  margin-block-start: 4em;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.text {
+  text-align: center;
+}
+
+.title {
+  color: white;
+  line-height: 1.2;
+  font-size: 1.75rem;
+  font-weight: var(--fw-bold);
+  margin-block-end: 1em;
+}
+
+.para {
+  color: white;
+  font-weight: var(--fw-medium);
+}
+
+.trial {
+  background-color: var(--clr-blue);
+  padding: 1.5em 3em;
+  border-radius: 0.5em;
+  border: 0;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.trial span {
+  font-weight: var(--fw-bold);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 0.5em;
+}
+
+input {
+  padding: 1em;
+  border-radius: 0.5em;
+  font: inherit;
+  border: 0.5px solid var(--clr-grayish-blue);
+}
+input::placeholder {
+  font-weight: var(--fw-semibold);
+  font-size: 0.75rem;
+}
+
+form button {
+  background-color: var(--clr-green);
+  padding: 1.5em 3em;
+  color: white;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 0.5em;
+  box-shadow: 0 2.5px 0 var(--clr-green-shadow);
+}
+
+.footer {
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--clr-grayish-blue);
+  font-weight: var(--fw-semibold);
+  line-height: 1.7;
+}
+.footer span {
+  color: var(--clr-red);
 }
