@@ -83,10 +83,11 @@ form {
 }
 
 input {
-  border-radius: 1em;
+  border-radius: 2em;
   padding: 1em 2.5em;
   outline: 0.1px solid var(--clr-pale-blue);
   border: 0;
+  flex-grow: 3;
 }
 input::placeholder {
   color: var(--clr-gray);
@@ -99,13 +100,29 @@ button {
   background-color: var(--clr-blue);
   padding: 1em 3em;
   border: 0;
-  border-radius: 1em;
+  border-radius: 2em;
   color: white;
   font-weight: var(--fw-semibold);
   font-size: 0.9rem;
-  box-shadow: 0 1em 1em var(--clr-pale-blue-shadow);
+  box-shadow: 0 0.5em 0.5em var(--clr-pale-blue-shadow);
+  flex-grow: 1;
+}
+
+.error {
+  outline: 0.1px solid red;
 }
 
 .footer {
   font-size: 0.75rem;
+}
+
+@media (min-width: 40em) {
+  body {
+    width: 35%;
+    margin-inline: auto;
+  }
+
+  form {
+    flex-direction: row;
+  }
 }

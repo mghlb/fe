@@ -15,15 +15,17 @@
     <img src="./images/logo.svg" alt="Ping logo" class="logo" />
     <h1 class="title">We are launching <span>soon!</span></h1>
     <p class="text">Subscribe and get notified</p>
-    <form>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Your email address.."
-      />
-      <button>Notify Me</button>
-    </form>
+    <div>
+      <form>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your email address.."
+        />
+        <button>Notify Me</button>
+      </form>
+    </div>
     <img src="./images/illustration-dashboard.png" alt="" />
     <div class="icons">
       <img src="./images/logo-facebook.svg" alt="logo-facebook" />
@@ -31,5 +33,20 @@
       <img src="./images/logo-instagram.svg" alt="logo-instagram" />
     </div>
     <p class="footer">&copy; Copyright Ping. All rights reserved.</p>
+
+    <script>
+      const input = document.querySelector('input')
+      const button = document.querySelector('button')
+      const form = document.querySelector('form')
+      const errorMessage = `<p style='color: red; text-align: left; margin-block: 1em'>Please provide a valid email address</p>`
+
+      button.addEventListener('click', (event) => {
+        event.preventDefault()
+        if (!input.value.includes('@')) {
+          input.classList.toggle('error')
+          form.insertAdjacentHTML('afterend', errorMessage)
+        }
+      })
+    </script>
   </body>
 </html>
