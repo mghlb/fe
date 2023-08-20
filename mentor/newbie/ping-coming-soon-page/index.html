@@ -12,10 +12,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <img src="./images/logo.svg" alt="Ping logo" />
+    <img src="./images/logo.svg" alt="Ping logo" class="logo" />
     <h1 class="title">We are launching <span>soon!</span></h1>
     <p class="text">Subscribe and get notified</p>
-    <button aria-placeholder="Your email address..">Notify Me</button>
+    <form>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Your email address.."
+      />
+      <button>Notify Me</button>
+    </form>
     <img src="./images/illustration-dashboard.png" alt="" />
     <div class="icons">
       <img src="./images/logo-facebook.svg" alt="logo-facebook" />
