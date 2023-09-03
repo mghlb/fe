@@ -33,12 +33,16 @@
         />
         <button>Subscribe to monthly newsletter</button>
       </form>
-      <div class="image__container">
-        <img
-          src="./assets/images/illustration-sign-up-desktop.svg"
-          alt="Signup Illustration"
+      <picture class="image__container">
+        <source
+          media="(min-width: 40em)"
+          srcset="./assets/images/illustration-sign-up-desktop.svg"
         />
-      </div>
+        <img
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt="Sign-up illustration"
+        />
+      </picture>
       <!-- Sign-up form end -->
     </div>
 
