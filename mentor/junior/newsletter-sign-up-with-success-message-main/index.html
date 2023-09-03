@@ -10,11 +10,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <div class="container">
       <!-- Sign-up form start -->
-      <form action="post">
+      <div class="email">
         <h1 class="title">Stay updated!</h1>
         <p class="subtitle">
           Join 60,000+ product managers receiving monthly updates on:
@@ -32,7 +33,7 @@
           placeholder="email@company.com"
         />
         <button>Subscribe to monthly newsletter</button>
-      </form>
+      </div>
       <picture class="image__container">
         <source
           media="(min-width: 40em)"
@@ -47,12 +48,15 @@
     </div>
 
     <!-- Success message start -->
-    <div class="success__container">
-      <h1 class="success__title">Thanks for subscribing!</h1>
-      <p class="success_subtitle">
-        A confirmation email has been sent to ash@loremcompany.com. Please open
-        it and click the button inside to confirm your subscription.
-      </p>
+    <div class="display__none success__container">
+      <div class="message">
+        <img src="./assets/images/icon-success.svg" alt="Success icon" />
+        <h1 class="success__title">Thanks for subscribing!</h1>
+        <p class="success_subtitle">
+          A confirmation email has been sent to ash@loremcompany.com. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
       <button>Dismiss message</button>
     </div>
     <!-- Success message end -->

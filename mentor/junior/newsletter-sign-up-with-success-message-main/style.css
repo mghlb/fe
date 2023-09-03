@@ -1,5 +1,6 @@
 :root {
   --clr-tomato: hsl(4, 100%, 67%);
+  --clr-tomato-shadow: hsla(4, 100%, 67%, 0.2);
 
   --clr-dark-slate-grey: hsl(234, 29%, 20%);
   --clr-charcoal-grey: hsl(235, 18%, 26%);
@@ -49,7 +50,7 @@ body {
   font-size: 3rem;
 }
 
-form {
+.email {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,6 +85,10 @@ input {
   border-radius: 1em;
   border: 0.5px solid var(--clr-grey);
 }
+.input__error {
+  background-color: var(--clr-tomato-shadow);
+  color: var(--clr-tomato);
+}
 
 button {
   background-color: var(--clr-dark-slate-grey);
@@ -93,8 +98,34 @@ button {
   border-radius: 1em;
   border: 0;
 }
+button:hover {
+  cursor: pointer;
+  background-color: var(--clr-tomato);
+  box-shadow: 0 5px 10px 5px var(--clr-tomato-shadow);
+}
+input:active {
+  cursor: pointer;
+  border: 0.5px solid var(--clr-charcoal-grey);
+}
 
 .success__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--clr-white);
+  min-height: 100dvh;
+  padding: 1.5em;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.message > img {
+  width: min(15%, 5em);
+}
+
+.display__none {
   display: none;
 }
 
@@ -106,11 +137,18 @@ button {
   .image__container {
     order: 2;
   }
-  form {
+  .email {
     order: 1;
     padding: 0;
   }
   .title {
     text-align: center;
+  }
+  .success__container {
+    min-height: 100%;
+    max-width: 25em;
+    border-radius: 1em;
+    padding: 2.5em;
+    gap: 2em;
   }
 }
