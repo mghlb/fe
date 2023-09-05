@@ -3,20 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="flex__group">
         <label for="day">
-          <input type="number" name="day" id="day" />
+          D A Y
+          <input type="number" name="day" id="day" placeholder="DD" />
         </label>
         <label for="month">
-          <input type="number" name="month" id="month" />
+          M O N T H
+          <input type="number" name="month" id="month" placeholder="MM" />
         </label>
         <label for="year">
-          <input type="number" name="year" id="year" />
+          Y E A R
+          <input type="number" name="year" id="year" placeholder="YYYY" />
         </label>
+      </div>
+      <div class="divider">
+        <hr />
+        <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" />
       </div>
       <div class="age">
         <ul>
