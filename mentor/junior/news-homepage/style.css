@@ -28,5 +28,125 @@
   margin: 0;
 }
 
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
 body {
+  min-height: 100dvh;
+  font-family: Inter;
+}
+.main__container {
+  min-height: inherit;
+  display: grid;
+  place-content: center;
+  max-width: 75%;
+  margin-inline: auto;
+  gap: 3em;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+li {
+  list-style: none;
+  color: var(--clr-dark-grayish-blue);
+}
+.container {
+  display: flex;
+  gap: 1.5em;
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2em;
+}
+h1 {
+  font-size: 3rem;
+}
+.main__sub {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+button {
+  padding: 1em;
+  background-color: var(--clr-soft-red);
+  color: var(--clr-off-white);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  align-self: self-start;
+  border: 0;
+  outline: transparent;
+}
+.img__container {
+  background-image: url(./assets/images/image-web-3-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: span 2;
+}
+.aside {
+  background-color: var(--clr-very-dark-blue);
+  color: var(--clr-off-white);
+  padding: 1em;
+}
+.articles__container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  margin-block: 2em;
+  gap: 3em;
+}
+.article {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1em;
+}
+.article::after {
+  content: '';
+  border-bottom: 1px solid var(--clr-dark-grayish-blue);
+}
+.article > p {
+  color: var(--clr-grayish-blue);
+}
+h2 {
+  color: var(--clr-soft-orange);
+  font-size: 2rem;
+  font-weight: var(--fw-extrabold);
+}
+.grid__flow h3 {
+  color: var(--clr-grayish-blue);
+  font-size: 2.5rem;
+}
+h4 {
+  color: var(--clr-very-dark-blue);
+}
+.subtitle {
+  line-height: 1.5;
+  color: var(--clr-dark-grayish-blue);
+}
+.flex__group {
+  display: flex;
+  gap: 1em;
+}
+.grid__flow {
+  display: grid;
+  grid-template-columns: auto 75%;
+  gap: 1em;
+}
+.grid__flow > img {
+  align-self: stretch;
+}
+.grid__flow > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 }
