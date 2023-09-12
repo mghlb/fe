@@ -1,10 +1,4 @@
 :root {
-  @font-face {
-    font-family: Inter;
-    src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf');
-    font-weight: 400 800;
-  }
-
   --clr-soft-orange: hsl(35, 77%, 62%);
   --clr-soft-red: hsl(5, 85%, 63%);
 
@@ -12,6 +6,8 @@
   --clr-grayish-blue: hsl(233, 8%, 79%);
   --clr-dark-grayish-blue: hsl(236, 13%, 42%);
   --clr-very-dark-blue: hsl(240, 100%, 5%);
+
+  --ff-default: 'Inter', sans-serif;
 
   --fw-regular: 400;
   --fw-bold: 700;
@@ -35,118 +31,143 @@ svg {
 }
 
 body {
-  min-height: 100dvh;
-  font-family: Inter;
+  font-family: var(--ff-default);
 }
 .main__container {
-  min-height: inherit;
   display: grid;
-  place-content: center;
-  max-width: 75%;
-  margin-inline: auto;
-  gap: 3em;
+  min-height: 100vh;
+  margin: 1em;
+  gap: 1.5em;
 }
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 ul {
-  display: flex;
-  gap: 2em;
-  align-items: center;
+  display: none;
 }
 li {
   list-style: none;
-  color: var(--clr-dark-grayish-blue);
-}
-.container {
-  display: flex;
-  gap: 1.5em;
 }
 .main {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 2em;
 }
 h1 {
-  font-size: 3rem;
+  font-weight: var(--fw-extrabold);
 }
 .main__sub {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 2em;
 }
 button {
   padding: 1em;
   background-color: var(--clr-soft-red);
   color: var(--clr-off-white);
-  letter-spacing: 3px;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   align-self: self-start;
+  width: 50%;
   border: 0;
-  outline: transparent;
 }
 .img__container {
-  background-image: url(./assets/images/image-web-3-desktop.jpg);
-  background-repeat: no-repeat;
+  background-image: url(./assets/images/image-web-3-mobile.jpg);
   background-size: cover;
-  grid-column: span 2;
+  min-height: 15em;
 }
 .aside {
   background-color: var(--clr-very-dark-blue);
-  color: var(--clr-off-white);
-  padding: 1em;
+  padding: 1.5em;
 }
 .articles__container {
+  margin-block-start: 2em;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  margin-block: 2em;
+  flex-direction: column;
   gap: 3em;
 }
 .article {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   gap: 1em;
 }
 .article::after {
   content: '';
-  border-bottom: 1px solid var(--clr-dark-grayish-blue);
-}
-.article > p {
-  color: var(--clr-grayish-blue);
+  border-bottom: 0.5px solid var(--clr-dark-grayish-blue);
 }
 h2 {
   color: var(--clr-soft-orange);
-  font-size: 2rem;
   font-weight: var(--fw-extrabold);
+  font-size: 2rem;
 }
-.grid__flow h3 {
+.article {
+  color: var(--clr-off-white);
+  font-weight: var(--fw-bold);
+}
+.article p {
   color: var(--clr-grayish-blue);
-  font-size: 2.5rem;
-}
-h4 {
-  color: var(--clr-very-dark-blue);
-}
-.subtitle {
-  line-height: 1.5;
-  color: var(--clr-dark-grayish-blue);
-}
-.flex__group {
-  display: flex;
-  gap: 1em;
+  font-weight: var(--fw-regular);
 }
 .grid__flow {
   display: grid;
   grid-template-columns: auto 75%;
   gap: 1em;
 }
-.grid__flow > img {
-  align-self: stretch;
+.subtitle {
+  line-height: 1.5;
+  color: var(--clr-dark-grayish-blue);
 }
-.grid__flow > div {
+.grid__flow h3 {
+  color: var(--clr-grayish-blue);
+  font-size: 2.5rem;
+}
+.flex__group {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   gap: 0.5em;
+}
+
+@media (min-width: 40em) {
+  ul {
+    display: flex;
+    gap: 3em;
+  }
+  .menu__icon {
+    display: none;
+  }
+  .main__container {
+    max-width: 75%;
+    margin-inline: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+  .img__container {
+    background-image: url(./assets/images/image-web-3-desktop.jpg);
+    background-size: cover;
+  }
+  nav {
+    grid-column: span 3;
+  }
+  .main {
+    grid-row: 2;
+    grid-column: span 2;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr;
+  }
+  .main__sub {
+    gap: 0;
+  }
+  .img__container {
+    grid-column: span 2;
+  }
+
+  .aside {
+    grid-row: 2;
+    grid-column: 3;
+  }
+  .grid__flow {
+    gap: 2em;
+  }
 }
