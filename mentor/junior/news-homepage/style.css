@@ -18,9 +18,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-* {
   margin: 0;
 }
 
@@ -44,11 +41,41 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+#dialog {
+  min-height: 100dvh;
+  left: 25%;
+  width: 75vw;
+  border: 0;
+  outline: none;
+}
+#dialog::backdrop {
+  background: hsla(0, 0%, 0%, 0.3);
+}
+.items {
+  position: relative;
+  top: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 2em;
+  font-size: 1.25rem;
+}
+.menu__icon {
+  cursor: pointer;
+}
+.close__icon {
+  cursor: pointer;
+  transform: translate(15em, 0.5em);
+}
 ul {
   display: none;
 }
 li {
   list-style: none;
+}
+li:hover {
+  cursor: pointer;
+  color: var(--clr-soft-orange);
 }
 .main {
   display: grid;
@@ -72,6 +99,11 @@ button {
   align-self: self-start;
   width: 50%;
   border: 0;
+}
+button:hover {
+  cursor: pointer;
+  background-color: var(--clr-very-dark-blue);
+  color: var(--clr-off-white);
 }
 .img__container {
   background-image: url(./assets/images/image-web-3-mobile.jpg);
@@ -106,6 +138,10 @@ h2 {
   color: var(--clr-off-white);
   font-weight: var(--fw-bold);
 }
+.article h3:hover {
+  cursor: pointer;
+  color: var(--clr-soft-orange);
+}
 .article p {
   color: var(--clr-grayish-blue);
   font-weight: var(--fw-regular);
@@ -122,6 +158,10 @@ h2 {
 .grid__flow h3 {
   color: var(--clr-grayish-blue);
   font-size: 2.5rem;
+}
+h4:hover {
+  cursor: pointer;
+  color: var(--clr-soft-red);
 }
 .flex__group {
   display: flex;

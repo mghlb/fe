@@ -15,7 +15,27 @@
     <div class="main__container">
       <nav>
         <img src="./assets/images/logo.svg" alt="" />
-        <img src="./assets/images/icon-menu.svg" alt="" class="menu__icon" />
+        <img
+          src="./assets/images/icon-menu.svg"
+          alt=""
+          class="menu__icon"
+          onclick="dialog.showModal()"
+        />
+        <dialog id="dialog">
+          <img
+            src="./assets/images/icon-menu-close.svg"
+            alt="Close icon"
+            class="close__icon"
+            onclick="dialog.close()"
+          />
+          <div class="items">
+            <p>Home</p>
+            <p>New</p>
+            <p>Popular</p>
+            <p>Trending</p>
+            <p>Categories</p>
+          </div>
+        </dialog>
         <ul>
           <li>Home</li>
           <li>New</li>
@@ -91,4 +111,10 @@
       </div>
     </div>
   </body>
+  <script>
+    const menuIcon = document.querySelector('.menu__icon')
+    menuIcon.addEventListener('click', (event) => {
+      console.log(event.target)
+    })
+  </script>
 </html>
