@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+  font-weight: 400 900;
+}
+:root {
+  --clr-prmry-red: ;
+  --clr-prmry-blue: ;
+
+  --clr-ntrl-white: ;
+  --clr-ntrl-very-lt-gry-blu: ;
+  --clr-ntrl-lt-gry-blu-1: ;
+  --clr-ntrl-lt-gry-blu-2: ;
+  --clr-ntrl-gry-blu: ;
+  --clr-ntrl-dark-gry-blu: ;
+  --clr-ntrl-very-dark-blu: ;
+
+  --ff-default: 'Plus Jakarta Sans';
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
