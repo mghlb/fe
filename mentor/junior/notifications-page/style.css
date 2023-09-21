@@ -4,16 +4,16 @@
   font-weight: 400 900;
 }
 :root {
-  --clr-prmry-red: ;
-  --clr-prmry-blue: ;
+  --clr-prmry-red: hsl(1, 90%, 64%);
+  --clr-prmry-blue: hsl(219, 85%, 26%);
 
-  --clr-ntrl-white: ;
-  --clr-ntrl-very-lt-gry-blu: ;
-  --clr-ntrl-lt-gry-blu-1: ;
-  --clr-ntrl-lt-gry-blu-2: ;
-  --clr-ntrl-gry-blu: ;
-  --clr-ntrl-dark-gry-blu: ;
-  --clr-ntrl-very-dark-blu: ;
+  --clr-ntrl-white: hsl(0, 0%, 100%);
+  --clr-ntrl-very-lt-gry-blu: hsl(210, 60%, 98%);
+  --clr-ntrl-lt-gry-blu-1: hsl(211, 68%, 94%);
+  --clr-ntrl-lt-gry-blu-2: hsl(205, 33%, 90%);
+  --clr-ntrl-gry-blu: hsl(219, 14%, 63%);
+  --clr-ntrl-dark-gry-blu: hsl(219, 12%, 42%);
+  --clr-ntrl-very-dark-blu: hsl(224, 21%, 14%);
 
   --ff-default: 'Plus Jakarta Sans';
   --fw-medium: 500;
@@ -32,4 +32,84 @@ img,
 svg {
   display: block;
   max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-ntrl-very-lt-gry-blu);
+  font-family: var(--ff-default);
+}
+
+.notifications__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--clr-ntrl-white);
+  padding: 2em;
+  border-radius: 1em;
+}
+.notifications__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notifications__header h2 {
+  font-weight: var(--fw-extrabold);
+  color: var(--clr-ntrl-very-dark-blu);
+}
+.notifications__header span {
+  font-size: 1.15rem;
+  margin-inline-start: 0.25em;
+  padding: 0.25em 0.7em;
+  background-color: var(--clr-prmry-blue);
+  color: var(--clr-ntrl-white);
+  border-radius: 0.5em;
+}
+.notifications__header p {
+  color: var(--clr-ntrl-dark-gry-blu);
+  font-weight: var(--fw-medium);
+}
+.notification {
+  display: grid;
+  column-gap: 1em;
+  grid-template-columns: 3em 1fr;
+  padding: 1em;
+}
+.avatar__img {
+  grid-row: span 3;
+  max-width: 3em;
+}
+.unseen {
+  background-color: var(--clr-ntrl-lt-gry-blu-1);
+  border-radius: 0.5em;
+}
+.user__name {
+  color: var(--clr-ntrl-very-dark-blu);
+  font-weight: var(--fw-bold);
+}
+.user__action {
+  font-weight: var(--fw-medium);
+  color: var(--clr-ntrl-gry-blu);
+}
+.user__action span {
+  font-weight: var(--fw-bold);
+}
+.notification__date {
+  color: var(--clr-ntrl-gry-blu);
+}
+.message {
+  padding: 1em;
+  margin-block-start: 0.75em;
+  max-width: 50ch;
+  border: 1px solid var(--clr-ntrl-lt-gry-blu-1);
+  border-radius: 0.25em;
+  color: var(--clr-ntrl-dark-gry-blu);
+}
+.group {
+  color: var(--clr-prmry-blue);
+}
+.post {
+  color: var(--clr-ntrl-dark-gry-blu);
 }
