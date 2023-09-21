@@ -71,6 +71,10 @@ body {
   color: var(--clr-ntrl-dark-gry-blu);
   font-weight: var(--fw-medium);
 }
+.notifications__header p:hover {
+  cursor: pointer;
+  color: var(--clr-prmry-blue);
+}
 .notification {
   display: grid;
   column-gap: 1em;
@@ -88,6 +92,10 @@ body {
 .user__name {
   color: var(--clr-ntrl-very-dark-blu);
   font-weight: var(--fw-bold);
+}
+.user__name:hover {
+  cursor: pointer;
+  color: var(--clr-prmry-blue);
 }
 .user__action {
   font-weight: var(--fw-medium);
@@ -107,9 +115,26 @@ body {
   border-radius: 0.25em;
   color: var(--clr-ntrl-dark-gry-blu);
 }
+.message:hover {
+  cursor: pointer;
+  background-color: var(--clr-ntrl-lt-gry-blu-1);
+}
 .group {
   color: var(--clr-prmry-blue);
 }
+.group {
+  cursor: pointer;
+}
 .post {
   color: var(--clr-ntrl-dark-gry-blu);
+}
+.container__with__img {
+  display: flex;
+  justify-content: space-between;
+}
+.container__with__img img {
+  max-width: 3em;
+}
+.container__with__img img:hover {
+  cursor: pointer;
 }
