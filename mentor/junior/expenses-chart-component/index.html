@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
@@ -13,16 +20,51 @@
         </div>
         <img src="./images/logo.svg" alt="Logo" />
       </div>
-      <div class="balance_details">
+      <div class="balance__details">
         <h1>Spending – Last 7 days</h1>
-        <div class="chart"></div>
-        <div class="balance__total">
-          <p>Total this month</p>
-          <p>478.33</p>
+        <div class="chart">
+          <div class="bar">
+            <div></div>
+            <p>mon</p>
+          </div>
+          <div class="bar">
+            <div></div>
+            <p>mon</p>
+          </div>
+          <div class="bar">
+            <div></div>
+            <p>tue</p>
+          </div>
+          <div class="bar">
+            <div></div>
+            <p>wed</p>
+          </div>
+          <div class="bar">
+            <div></div>
+            <p>thu</p>
+          </div>
+          <div class="bar">
+            <div></div>
+            <p>fri</p>
+          </div>
+          <div class="bar">
+            <div></div>
+            <p>sat</p>
+          </div>
+          <div class="bar">
+            <div></div>
+            <p>sun</p>
+          </div>
         </div>
-        <div class="balance__percentage">
-          <p>+2.4%</p>
-          <p>from last month</p>
+        <div class="balance__summary">
+          <div class="balance__total">
+            <p>Total this month</p>
+            <p class="value">$478.33</p>
+          </div>
+          <div class="balance__percentage">
+            <p class="value">+2.4%</p>
+            <p>from last month</p>
+          </div>
         </div>
       </div>
     </main>
