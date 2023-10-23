@@ -1,6 +1,8 @@
 :root {
   --clr-soft-red: hsl(10, 79%, 65%);
+  --clr-soft-red-light: hsl(10, 79%, 80%);
   --clr-cyan: hsl(186, 34%, 60%);
+  --clr-cyan-light: hsl(186, 34%, 80%);
 
   --clr-dark-brown: hsl(25, 47%, 15%);
   --clr-md-brown: hsl(28, 10%, 53%);
@@ -94,6 +96,29 @@ main {
   margin-block: 0.5em;
   border-radius: 3px;
 }
+.bar > div:hover {
+  cursor: pointer;
+  background-color: var(--clr-soft-red-light);
+}
+
+[data-month='wed']:hover::before {
+  width: fit-content;
+  font-size: 0.825rem;
+  padding: 5px;
+  color: white;
+  content: '$52.36';
+  border-radius: 3px;
+  background-color: var(--clr-dark-brown);
+}
+[data-month='thu']:hover::before {
+  width: fit-content;
+  font-size: 0.825rem;
+  padding: 5px;
+  color: white;
+  content: '$31.07';
+  border-radius: 3px;
+  background-color: var(--clr-dark-brown);
+}
 
 [data-month='mon'] > div {
   min-height: 2em;
@@ -104,6 +129,10 @@ main {
 [data-month='wed'] > div {
   min-height: 5em;
   background-color: var(--clr-cyan);
+}
+[data-month='wed'] > div:hover {
+  min-height: 5em;
+  background-color: var(--clr-cyan-light);
 }
 [data-month='thu'] > div {
   min-height: 3em;
