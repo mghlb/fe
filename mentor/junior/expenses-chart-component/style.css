@@ -33,6 +33,8 @@ main {
   display: grid;
   gap: 10px;
   width: 25em;
+  max-width: 90%;
+  margin-inline: auto;
 }
 
 .balance__header {
@@ -42,6 +44,15 @@ main {
   background-color: var(--clr-soft-red);
   padding: 15px 20px;
   border-radius: 1em;
+}
+
+.balance__number {
+  color: white;
+}
+.balance__number > .value {
+  font-weight: var(--fw-bold);
+  color: white;
+  font-size: 1.5rem;
 }
 
 .balance__details {
@@ -65,11 +76,46 @@ main {
 }
 
 .bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 2.25em;
   margin-block-end: 1em;
+  text-align: center;
+}
+
+.bar > p {
+  color: var(--clr-md-brown);
 }
 
 .bar > div {
-  min-height: 20px;
+  font-size: 1.5rem;
+  background-color: var(--clr-soft-red);
+  margin-block: 0.5em;
+  border-radius: 3px;
+}
+
+[data-month='mon'] > div {
+  min-height: 2em;
+}
+[data-month='tue'] > div {
+  min-height: 3.5em;
+}
+[data-month='wed'] > div {
+  min-height: 5em;
+  background-color: var(--clr-cyan);
+}
+[data-month='thu'] > div {
+  min-height: 3em;
+}
+[data-month='fri'] > div {
+  min-height: 2.5em;
+}
+[data-month='sat'] > div {
+  min-height: 4em;
+}
+[data-month='sun'] > div {
+  min-height: 2.75em;
 }
 
 .balance__percentage {
